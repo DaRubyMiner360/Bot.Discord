@@ -1,0 +1,5 @@
+on "Bot.OnReady":
+  print "Clear Command Loaded"
+
+on "clear ":
+  clear "${args[0]}"

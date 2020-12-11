@@ -1,0 +1,13 @@
+on "Bot.OnReady":
+  print "DaRubyMiner360 Command Loaded"
+
+on "darubyminer360":
+  igrequestnotauthor "DaRubyMiner360"
+  reply ", you are not my master or creator. My master is DaRubyMiner360."
+  igrequestnotauthor ""
+  igrequestauthor "DaRubyMiner360"
+  say "Hello DaRubyMiner360"
+  reply ", you are my master and creator."
+  replyend "You are my master and creator, "
+  replypos "${mention}, you are my master and creator, ${mention}."
+  igrequestauthor ""

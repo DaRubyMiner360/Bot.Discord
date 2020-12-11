@@ -1,0 +1,8 @@
+on "Bot.OnReady":
+  print "Ping Command Loaded"
+
+on "ping":
+  say "pong"
+  
+on "${noprefix}ping":
+  say "You need to type ~~ping :)"

@@ -1,0 +1,26 @@
+on "Bot.OnReady":
+  print "Help Command Loaded"
+
+on "help ":
+  setactivity "Game", "The Helping Game"
+  setstatus "online"
+
+  opendm "${author}", "Hi! I'm a bot built to improve your discord experience.
+
+Commands:
+- ~~clear <amount>: Clears <amount> messages
+- ~~ping: Says pong
+- ~~info: Gives a bit of info about the bot
+- ~~embed: Sends an embed
+- ~~createtextchannel: Creates a text channel
+- ~~createvoicechannel: Creates a voice channel
+- ~~darubyminer360: Tells you if you are DaRubyMiner360 or not
+
+"
+
+on "info":
+  say "Greetings. I am a demo bot to display the capabilities of Bot.Discord."
+  say "Written by DaRubyMiner360."
+
+on "":
+  say "Please supply a command"

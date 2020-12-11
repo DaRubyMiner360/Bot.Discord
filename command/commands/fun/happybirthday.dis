@@ -1,0 +1,7 @@
+on "Bot.OnReady":
+  print "Happy Birthday Command Loaded"
+
+on "${noprefix}happy birthday ":
+  say "Happy Birthday! 🎈🎉"
+  setactivity "Game", "Happy Birthday to ${author}"
+  setstatus "online"

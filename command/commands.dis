@@ -1,0 +1,12 @@
+#import command.a
+import command.commands.help
+import command.commands.clear
+import command.commands.fun.ping
+import command.commands.fun.hello
+import command.commands.fun.happybirthday
+import command.commands.status
+import command.commands.embed
+import command.commands.darubyminer360
+
+on "Bot.OnReady":
+  print "Command Manager Loaded"

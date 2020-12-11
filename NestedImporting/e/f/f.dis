@@ -1,0 +1,2 @@
+on "Bot.OnReady":
+  print "F"

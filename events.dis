@@ -1,0 +1,48 @@
+# When the bot starts
+on "Bot.OnReady":
+  setprefix "~~"
+  setactivity "Game", "The Game"
+  setstatus "online"
+
+# When a sends a message
+on "Bot.OnMessage":
+  say "You sent a message!"
+
+# When a edits a message
+on "Bot.OnMessageEdit":
+  say "You edited a message!"
+
+# When a deletes a message
+on "Bot.OnMessageDelete":
+  say "You deleted a message!"
+  #say "${message}"
+
+# When a user edits or deletes a message (raw form)
+on "Bot.OnRawMessageEvent":
+  say "You did something with a message (raw form)!"
+
+# When a user sends, edits, or deletes a message
+on "Bot.OnMessageEvent":
+  say "You did something with a message!"
+
+# When a user joins the guild
+on "Bot.OnMemberJoin":
+  print "Bot.OnMemberJoin"
+  replypos "Welcome ${mention}! 😊"
+  setactivity "Game", "Giving A Warm Welcome to ${authorname}! 😊"
+  setstatus "online"
+
+# When a user leaves the guild
+on "Bot.OnMemberLeave":
+  print "Bot.OnMemberLeave"
+  replypos "Goodbye ${mention}! You will be missed. 😔"
+  setactivity "Game", "Saying Goodbye to ${authorname}. 😔"
+  setstatus "online"
+
+# When a user adds a reaction (raw form)
+on "Bot.OnRawReactionAdd":
+  print "Bot.OnRawReactionAdd"
+
+# When a user removes a reaction (raw form)
+on "Bot.OnRawReactionRemove":
+  print "Bot.OnRawReactionRemove"

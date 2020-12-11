@@ -1,0 +1,11 @@
+on "Bot.OnReady":
+  print "Status Commands Loaded"
+
+on "idle":
+  setstatus "idle"
+
+on "online":
+  setstatus "online"
+
+on "donotdisturb":
+  setstatus "do_not_disturb"

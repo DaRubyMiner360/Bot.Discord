@@ -1,0 +1,4 @@
+import e.e
+
+on "Bot.OnReady":
+  print "E"

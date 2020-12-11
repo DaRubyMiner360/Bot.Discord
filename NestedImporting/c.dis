@@ -1,0 +1,4 @@
+import d
+
+on "Bot.OnReady":
+  print "C"

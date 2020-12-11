@@ -1,0 +1,12 @@
+on "Bot.OnReady":
+  print "Hello Command Loaded"
+
+on "${noprefix}hello":
+  say "0 / ${args.count}: ${args[0]}"
+  say "1 / ${args.count}: ${args[1]}"
+  say "2 / ${args.count}: ${args[2]}"
+
+on "${noprefix}hello2":
+  say "0 / ${mesargs.count}: ${mesargs[0]}"
+  say "1 / ${mesargs.count}: ${mesargs[1]}"
+  say "2 / ${mesargs.count}: ${mesargs[2]}"
