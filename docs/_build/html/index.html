@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bot.Discord &#8212; Bot.Discord Documentation 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="bot-discord">
+<h1>Bot.Discord<a class="headerlink" href="#bot-discord" title="Permalink to this headline">¶</a></h1>
+<p>Bot.Discord is a simple programming language that allows anyone, with no experience, to build a Discord bot.
+It is crafted to create a simple experience for those using it.</p>
+<p>Join our <a class="reference external" href="https://discord.gg/BFX5xAa">discord server</a> to test out a demo bot built using Bot.Discord.</p>
+<p>Note: this language is pretty simple and barebones for now. (WIP)</p>
+<div class="section" id="how-to">
+<h2>How To<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h2>
+<p>Bot.Discord can run and deploy your own bot within repl.it (Instructions for out of repl.it coming soon).</p>
+<p>First off, clone this repl (fork or download).</p>
+<p>To setup the discord bot,</p>
+<ol class="simple">
+<li><p>Open the discord developer portal.</p></li>
+<li><p>Create a new application.</p></li>
+<li><p>Add a bot to your discord application.</p></li>
+<li><p>Create a file named .env. This file will be hidden from the public.</p></li>
+<li><p>Copy the Bot’s token, and paste into the .env file in the following format:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TOKEN</span><span class="o">=&lt;</span><span class="n">Your</span> <span class="n">token</span> <span class="n">goes</span> <span class="n">here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>To invite the bot to your server,</p>
+<ol class="simple">
+<li><p>Go to the OAuth2 tab</p></li>
+<li><p>Check the box labeled bot under scopes</p></li>
+<li><p>Under bot permissions, check all the boxes you need</p></li>
+<li><p>At the bottom of scopes, there will be a text box with a link</p></li>
+<li><p>Copy and paste the link into you browser.</p></li>
+</ol>
+<p>You can edit your code in the main.Bot.Discord file. See tutorial for more info.</p>
+</div>
+<div class="section" id="tutorial">
+<h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
+<p>Writing code for your bot using Bot.Discord is super simple.</p>
+<p>To say something when a message is sent,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on</span> <span class="s2">&quot;ping&quot;</span><span class="p">:</span>
+  <span class="n">say</span> <span class="s2">&quot;pong&quot;</span>
+</pre></div>
+</div>
+<p>Messages in Bot.Discord are always surrounded by quotes.
+Say is currently the only command implemented.</p>
+<p>You can have multiple events,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on</span> <span class="s2">&quot;ping&quot;</span><span class="p">:</span>
+  <span class="n">say</span> <span class="s2">&quot;pong&quot;</span>
+
+<span class="n">on</span> <span class="s2">&quot;What&#39;s up?&quot;</span><span class="p">:</span>
+  <span class="n">say</span> <span class="s2">&quot;Hey!&quot;</span>
+</pre></div>
+</div>
+<p>You can create variables within Bot.Discord much like the simple syntax found within Python,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on</span> <span class="s2">&quot;Hello&quot;</span><span class="p">:</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Bob&quot;</span>
+  <span class="n">say</span> <span class="n">name</span>
+</pre></div>
+</div>
+<p>Sometimes, we want to say many things, in many commands,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on</span> <span class="s2">&quot;Hello&quot;</span><span class="p">:</span>
+  <span class="n">say</span> <span class="s2">&quot;hi&quot;</span>
+  <span class="n">say</span> <span class="s2">&quot;hello&quot;</span>
+</pre></div>
+</div>
+<p>Or many things, in one command,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on</span> <span class="s2">&quot;Hello&quot;</span><span class="p">:</span>
+  <span class="n">say</span> <span class="s2">&quot;hi&quot;</span><span class="p">,</span> <span class="s2">&quot;greetings&quot;</span><span class="p">,</span> <span class="s2">&quot;good morning&quot;</span>
+</pre></div>
+</div>
+<p>And sometimes, we just want one line,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on</span> <span class="s2">&quot;Hello&quot;</span><span class="p">:</span> <span class="n">say</span> <span class="s2">&quot;hi&quot;</span><span class="p">,</span> <span class="s2">&quot;greetings&quot;</span><span class="p">,</span> <span class="s2">&quot;good morning&quot;</span>
+</pre></div>
+</div>
+<p>We can also create complex bots, with these simple rules,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on</span> <span class="s2">&quot;Bot.OnReady&quot;</span><span class="p">:</span>
+  <span class="n">setprefix</span> <span class="s2">&quot;~~&quot;</span>
+
+<span class="n">on</span> <span class="s2">&quot;ping&quot;</span><span class="p">:</span>
+  <span class="n">say</span> <span class="s2">&quot;pong&quot;</span>
+
+<span class="n">on</span> <span class="s2">&quot;info&quot;</span><span class="p">:</span>
+  <span class="n">say</span> <span class="s2">&quot;Greetings. I am a demo bot to display the capabilities of Bot.Discord.&quot;</span>
+  <span class="n">say</span> <span class="s2">&quot;Written by DaRubyMiner360.&quot;</span>
+
+<span class="n">on</span> <span class="s2">&quot;&quot;</span>
+  <span class="n">say</span> <span class="s2">&quot;please supply a command&quot;</span>
+  
+<span class="n">on</span> <span class="s2">&quot;$</span><span class="si">{noprefix}</span><span class="s2">ping&quot;</span><span class="p">:</span>
+  <span class="n">say</span> <span class="s2">&quot;You need to type $</span><span class="si">{prefix}</span><span class="s2">ping :)&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>There are numerous features Bot.Discord that are not currently/being implemented.
+Some of those features include:</p>
+<ul class="simple">
+<li><p>events [WORKING ON]</p></li>
+<li><p>more commands [WORKING ON]</p></li>
+<li><p>conditionals [WORKING ON]</p></li>
+<li><p>arithmetic (and numbers) [COMING SOON]</p></li>
+<li><p>lists [COMING SOON]</p></li>
+<li><p>errors [WORKING ON]</p></li>
+<li><p>discord-specific attributes (user, server, channel, etc.) [WORKING ON]</p></li>
+</ul>
+</div>
+<div class="section" id="demo">
+<h2>Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h2>
+<p>Join our <a class="reference external" href="https://discord.gg/BFX5xAa">discord server</a> to test out a demo bot built using Bot.Discord.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Bot.Discord Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, DaRubyMiner360.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

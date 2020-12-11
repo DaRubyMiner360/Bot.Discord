@@ -4,6 +4,6 @@ python:
   version: 3.8
   install:
     - requirements: requirements.txt
-mkdocs:
-  configuration: mkdocs.yml
+sphinx:
+  configuration: docs/conf.py
 formats: all
