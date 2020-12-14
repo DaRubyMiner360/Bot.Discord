@@ -1,4 +1,0 @@
-import command.commands
-
-on "Bot.OnReady":
-  print "UAU"

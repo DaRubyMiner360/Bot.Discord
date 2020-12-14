@@ -12,26 +12,7 @@ from discord.ext import commands
 import os
 
 class Runtime():
-  # def __init__(self):
-  #   global methods
-  #   coms = {}
-  #   for i in range(len(shared.commands)):
-  #     coms[shared.commands[i]] = ""
-  #     if shared.commands[i] == "print":
-  #       coms[shared.commands[i]] = self.eprint
-  #     else:
-  #       if shared.commands[i].startswith("ig"):
-  #         coms[shared.commands[i]] = eval("self." + shared.commands[i].replace("ig", "", 1))
-  #       else:
-  #         coms[shared.commands[i]] = eval("self." + shared.commands[i])
-  #   methods = coms
-
   def convertToDict(runtime):
-    # possibles = globals().copy()
-    # possibles.update(locals())
-    # coms = {shared.commands[i]: possibles.get(shared.commands[i]) for i in range(0, len(shared.commands), 2)}
-    
-    # global methods
     coms = {}
     for i in range(len(shared.commands)):
       coms[shared.commands[i]] = ""
@@ -533,8 +514,8 @@ class Runtime():
       self.event = True
 
       self.vars["message2"] = "Bot.OnReady"
-      self.vars["message"] = "Bot.OnReady"
-      self.args = "Bot.OnReady".split()
+      self.vars["message"] = ""
+      self.args = "".split()
       self.vars["authorName"] = self.client.user.name
       self.author = self.client.user
 
